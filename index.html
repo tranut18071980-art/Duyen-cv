@@ -5,144 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lê Thùy Duyên - Professional Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        /* Tông màu Trắng Kem & Nâu Trầm sang trọng */
-        :root {
-            --bg-cream: #fdfaf1;
-            --card-white: #ffffff;
-            --text-main: #4a4031;
-            --accent-gold: #c5a059;
-            --soft-border: #eee5d3;
-        }
-
-        body { 
-            margin: 0; padding: 0; 
-            background: var(--bg-cream); 
-            color: var(--text-main); 
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            display: flex; justify-content: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            width: 95%; max-width: 500px;
-            margin: 30px 0;
-            z-index: 2;
-        }
-
-        /* Card chính */
-        .main-card {
-            background: var(--card-white);
-            border-radius: 30px;
-            padding: 35px 20px;
-            box-shadow: 0 10px 40px rgba(181, 169, 143, 0.15);
-            text-align: center;
-            border: 1px solid var(--soft-border);
-        }
-
-        /* Avatar giống mẫu 3974 */
-        .avatar-wrapper {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        .avatar {
-            width: 140px; height: 140px;
-            border-radius: 50%;
-            border: 4px solid var(--card-white);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            object-fit: cover;
-        }
-
-        h1 { font-size: 26px; margin: 10px 0; color: #2c3e50; font-weight: 700; }
-        
-        /* Badge Kế toán viên tương lai */
-        .badge {
-            background: #007bff;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .school {
-            color: #7f8c8d;
-            font-size: 14px;
-            display: block;
-            margin-bottom: 25px;
-        }
-
-        /* Khối nội dung */
-        .section {
-            text-align: left;
-            background: #fff;
-            border-radius: 20px;
-            padding: 20px;
-            margin-top: 20px;
-            border: 1px solid var(--soft-border);
-        }
-
-        .section-title {
-            font-size: 18px;
-            color: #2c3e50;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .section-title i { color: #007bff; }
-
-        .content-text {
-            font-size: 14.5px;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        /* Hình ảnh minh họa thực tế (3978, 3979, 3980) */
-        .illus-img {
-            width: 100%;
-            border-radius: 15px;
-            margin-top: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-        .illus-img:hover { transform: scale(1.02); }
-
-        /* Social Icons */
-        .socials {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .socials a {
-            color: var(--text-main);
-            font-size: 20px;
-            transition: 0.3s;
-        }
-        .socials a:hover { color: #007bff; transform: translateY(-3px); }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            font-size: 11px;
-            color: #999;
-            letter-spacing: 1px;
-        }
+        body { margin: 0; padding: 0; background: #fdfaf1; color: #4a4031; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; }
+        .container { width: 95%; max-width: 500px; margin: 30px 0; }
+        .main-card { background: #ffffff; border-radius: 30px; padding: 35px 20px; box-shadow: 0 10px 40px rgba(181,169,143,0.2); text-align: center; border: 1px solid #eee5d3; }
+        .avatar { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); object-fit: cover; }
+        h1 { font-size: 26px; margin: 10px 0; color: #2c3e50; }
+        .badge { background: #007bff; color: white; padding: 8px 20px; border-radius: 50px; font-size: 13px; display: inline-block; margin-bottom: 15px; }
+        .section { text-align: left; background: #fff; border-radius: 20px; padding: 20px; margin-top: 20px; border: 1px solid #eee5d3; }
+        .section-title { font-size: 18px; color: #2c3e50; font-weight: bold; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .illus-img { width: 100%; border-radius: 15px; margin-top: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
     </style>
 </head>
 <body>
-
-<div class="container animate__animated animate__fadeIn">
+<div class="container">
     <div class="main-card">
-        <div class="avatar-wrapper">
-            <img src="
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Duyen" class="avatar">
+        <h1>Lê Thùy Duyên</h1>
+        <div class="badge">KẾ TOÁN VIÊN TƯƠNG LAI 📊</div>
+        <p style="color: #7f8c8d;">THPT Tôn Đức Thắng - Nam Ninh Hòa</p>
+
+        <div class="section">
+            <div class="section-title"><i class="fas fa-user"></i> Giới thiệu</div>
+            <p>Chào bạn! Mình là nữ sinh lớp 11 yêu thích sự tỉ mỉ của những con số.</p>
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop" class="illus-img">
+        </div>
+
+        <div class="section">
+            <div class="section-title"><i class="fas fa-chart-bar"></i> Thế mạnh</div>
+            <p>Tư duy logic, kỹ năng Excel và phân tích báo cáo tài chính.</p>
+            <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=1000&auto=format&fit=crop" class="illus-img">
+        </div>
+
+        <div class="section" style="background: #f0f7ff;">
+            <div class="section-title" style="color: #0056b3;"><i class="fas fa-university"></i> Mục tiêu 2026</div>
+            <p>Đậu chuyên ngành Kế toán - Kiểm toán với điểm số 7.5+.</p>
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" class="illus-img">
+        </div>
+    </div>
+</div>
+</body>
+</html>
