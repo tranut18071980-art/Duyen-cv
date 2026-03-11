@@ -3,105 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lê Thùy Duyên - Professional CV 2026</title>
+    <title>Lê Thùy Duyên - Báo cáo năng lực</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
+        /* Tái hiện chính xác tông màu xanh và vàng của trang mẫu */
         :root {
-            --bg-cream: #fdfaf1;
-            --card-white: #ffffff;
-            --text-main: #4a4031;
+            --primary-bg: #1a1c2a; /* Nâu than đậm giống mẫu */
+            --card-bg: #ffffff;
+            --text-dark: #2c3e50;
+            --accent-yellow: #ffc107;
             --accent-blue: #007bff;
-            --soft-border: #eee5d3;
         }
 
-        body { margin: 0; padding: 0; background: var(--bg-cream); color: var(--text-main); font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; }
-        .container { width: 95%; max-width: 550px; margin: 30px 0; }
-        .main-card { background: var(--card-white); border-radius: 35px; padding: 40px 25px; box-shadow: 0 15px 50px rgba(181, 169, 143, 0.2); text-align: center; border: 1px solid var(--soft-border); }
-        
-        .avatar { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 5px 20px rgba(0,0,0,0.1); object-fit: cover; }
-        h1 { font-size: 28px; margin: 15px 0 5px; color: #2c3e50; font-weight: 800; }
-        .badge { background: var(--accent-blue); color: white; padding: 8px 25px; border-radius: 50px; font-size: 13px; font-weight: 600; display: inline-block; margin-bottom: 20px; }
-        
-        /* Câu nói tâm đắc */
-        .quote { font-style: italic; color: #a6916e; margin: 10px 0 30px; font-size: 15px; position: relative; padding: 0 20px; }
-        .quote::before { content: '"'; font-size: 40px; position: absolute; left: 0; top: -10px; opacity: 0.2; }
+        body { 
+            margin: 0; padding: 0; 
+            background: var(--primary-bg); 
+            color: #fff; 
+            font-family: 'Open Sans', Roboto, sans-serif;
+            display: flex; justify-content: center;
+        }
 
-        .section { text-align: left; background: #fff; border-radius: 25px; padding: 25px; margin-top: 25px; border: 1px solid var(--soft-border); transition: 0.3s; }
-        .section:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        .section-title { font-size: 19px; color: #2c3e50; display: flex; align-items: center; gap: 12px; margin-bottom: 15px; font-weight: 700; border-bottom: 2px solid var(--bg-cream); padding-bottom: 10px; }
-        .section-title i { color: var(--accent-blue); }
+        .container {
+            width: 100%; max-width: 480px; /* Bóp chiều rộng lại giống giao diện điện thoại */
+            margin: 0; z-index: 2;
+        }
 
-        .content-text { font-size: 14.8px; line-height: 1.8; color: #555; margin-bottom: 12px; }
-        .highlight { color: var(--accent-blue); font-weight: bold; }
+        /* HEADER & NAVIGATION (Làm giống hệt menu) */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 20px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        header h1 { font-size: 18px; margin: 0; color: #fff; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 15px; }
+        nav ul li a { text-decoration: none; color: #ccc; font-size: 13px; font-weight: 500; }
+        nav ul li a:hover { color: #fff; }
 
-        /* Danh sách kỹ năng chuyên sâu */
-        .skill-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; }
-        .skill-item { background: var(--bg-cream); padding: 10px; border-radius: 12px; font-size: 13px; display: flex; align-items: center; gap: 8px; }
+        /* Khối tiêu đề lớn chạy chữ giống mẫu */
+        .hero-section {
+            padding: 50px 20px; text-align: left;
+        }
+        .hero-section h1 { font-size: 40px; font-weight: 800; color: #fff; margin: 0 0 10px; }
+        .hero-section h1 span { color: var(--accent-yellow); display: block; }
+        .hero-section h2 { font-size: 50px; color: #fff; margin: 0; }
 
-        .illus-img { width: 100%; border-radius: 20px; margin: 15px 0; box-shadow: 0 8px 20px rgba(0,0,0,0.07); }
+        /* Bối cảnh Header (Vòng tròn Avatar và Text giống ảnh 3974) */
+        .profile-context {
+            padding: 30px 20px; text-align: center; background: #fff;
+            border-radius: 30px 30px 0 0; margin-top: -30px;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
+        }
+        .avatar-circle {
+            width: 150px; height: 150px;
+            border-radius: 50%; border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative; top: -75px;
+            margin-bottom: -50px;
+        }
+        .profile-name { font-size: 26px; color: #1a1c2a; font-weight: 700; }
+        .profile-title { 
+            background: #007bff; color: white;
+            padding: 10px 25px; border-radius: 50px;
+            font-size: 14px; font-weight: 600;
+            display: inline-flex; align-items: center; gap: 8px;
+            margin: 15px 0;
+        }
+        .profile-school { color: #7f8c8d; font-size: 14px; margin-bottom: 30px; }
 
-        footer { text-align: center; padding: 40px; font-size: 12px; color: #a6916e; line-height: 1.6; }
+        /* Các khối nội dung chi tiết (Card giống ảnh 3976) */
+        .section-card {
+            background: #fff; border-radius: 20px; padding: 25px;
+            margin: 20px; border: 1px solid #f1e9d2;
+            box-shadow: 0 10px 30px rgba(181, 169, 143, 0.1);
+            text-align: left;
+        }
+        .section-header { 
+            display: flex; align-items: center; gap: 15px;
+            background: #fdfaf1; padding: 10px 15px;
+            border-radius: 10px; margin-bottom: 20px;
+        }
+        .section-header i { color: #007bff; font-size: 20px; }
+        .section-header h3 { font-size: 17px; color: #2c3e50; margin: 0; }
+
+        .content-text { font-size: 14.5px; line-height: 1.7; color: #555; }
+
+        /* Hình ảnh minh họa (lồng vào giống mẫu) */
+        .illus-img { width: 100%; border-radius: 15px; margin-top: 15px; }
+
+        /* Kỹ năng chia lưới giống mẫu (Ảnh 3976) */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .skill-item {
+            background: #fdfaf1; padding: 15px; border-radius: 15px;
+            text-align: center; border: 1px solid #f1e9d2;
+        }
+        .skill-item i { color: #007bff; font-size: 24px; margin-bottom: 10px; }
+        .skill-item p { margin: 0; font-size: 13.5px; color: #5d4e37; }
+
+        /* Footer chuẩn mực giống mẫu */
+        footer {
+            text-align: center; padding: 40px; font-size: 11px;
+            color: #999; letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
 
 <div class="container animate__animated animate__fadeIn">
-    <div class="main-card">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Duyen" class="avatar">
-        <h1>LÊ THÙY DUYÊN</h1>
-        <div class="badge">KẾ TOÁN VIÊN TƯƠNG LAI <i class="fas fa-calculator"></i></div>
-        
-        <p class="quote">"Sự chính xác trong hiện tại là nền tảng bền vững cho tương lai."</p>
+    <header>
+        <a href="#" style="text-decoration: none; color: #fff;">Lê Thùy Duyên</a>
+        <nav>
+            <ul>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Thế mạnh</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="section">
-            <div class="section-title"><i class="fas fa-user-tag"></i> Về bản thân mình</div>
-            <p class="content-text">
-                Chào bạn! Mình là <b>Thùy Duyên</b>, hiện đang theo học tại trường <b>THPT Tôn Đức Thắng</b>. Ngay từ những năm đầu cấp 3, mình đã sớm nhận ra niềm đam mê mãnh liệt với những con số và sự logic trong dòng tiền.
-            </p>
-            <p class="content-text">
-                Mình tự nhận thấy bản thân là một người <span class="highlight">điềm tĩnh, tỉ mỉ và luôn đề cao sự trung thực</span>. Với mình, mỗi báo cáo tài chính không chỉ là những con số vô tri, mà là sự minh bạch và uy tín của một tổ chức.
-            </p>
-            <img src="https://img.freepik.com/premium-photo/attractive-young-female-accountant-using-calculator-calculate-business-results-financial-document_33807-684.jpg" class="illus-img">
+    <div class="hero-section">
+        <h1><span>NĂNG LỰC &</span> ĐỊNH HƯỚNG CÁ NHÂN</h1>
+    </div>
+
+    <div class="profile-context">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Duyen" class="avatar-circle">
+        <h1 class="profile-name">Lê Thùy Duyên</h1>
+        <div class="profile-title">
+            KẾ TOÁN VIÊN TƯƠNG LAI <i class="fas fa-calculator"></i>
         </div>
+        <p class="profile-school">
+            <i class="fas fa-school"></i> THPT Tôn Đức Thắng - Nam Ninh Hòa
+        </p>
+    </div>
 
-        <div class="section">
-            <div class="section-title"><i class="fas fa-bolt"></i> Năng lực & Thế mạnh</div>
-            <p class="content-text">Mình đang tập trung xây dựng nền tảng vững chắc thông qua các kỹ năng:</p>
-            <div class="skill-list">
-                <div class="skill-item"><i class="fas fa-check-circle"></i> Tư duy Toán học tốt</div>
-                <div class="skill-item"><i class="fas fa-file-excel"></i> Tin học văn phòng</div>
-                <div class="skill-item"><i class="fas fa-search-dollar"></i> Phân tích dữ liệu</div>
-                <div class="skill-item"><i class="fas fa-clock"></i> Quản lý thời gian</div>
-                <div class="skill-item"><i class="fas fa-glasses"></i> Soát lỗi tỉ mỉ</div>
-                <div class="skill-item"><i class="fas fa-balance-scale"></i> Kiến thức KTPL</div>
-            </div>
-            <img src="https://img.freepik.com/premium-photo/directly-above-view-calculator-money-financial-reports_1048944-1191599.jpg" class="illus-img">
+    <div class="section-card">
+        <div class="section-header">
+            <i class="fas fa-user-circle"></i> <h3>GIỚI THIỆU BẢN THÂN</h3>
         </div>
+        <p class="content-text">
+            Chào bạn! Mình là cô gái lớp 11 đầy nhiệt huyết, yêu thích sự tỉ mỉ của những con số. Mục tiêu của mình là trở thành một kế toán viên giỏi, mang lại sự chính xác và minh bạch cho mọi công việc mình đảm nhận.
+        </p>
+        <img src="https://img.freepik.com/premium-photo/attractive-young-female-accountant-using-calculator-calculate-business-results-financial-document_33807-684.jpg" class="illus-img">
+    </div>
 
-        <div class="section" style="background: #f0f7ff;">
-            <div class="section-title" style="color: #0056b3;"><i class="fas fa-flag-checkered"></i> Mục tiêu Đại học 2026</div>
-            <p class="content-text">
-                Sứ mệnh lớn nhất của mình trong 2 năm tới là chinh phục tấm vé bước vào giảng đường Đại học chuyên ngành <span class="highlight">Kế toán - Kiểm toán</span>.
-            </p>
-            <p class="content-text">
-                🎯 <b>Kế hoạch cụ thể:</b> Đạt điểm trung bình các môn thi tốt nghiệp từ <b>7.5+</b>, đặc biệt ưu tiên các môn khối C03 và D01. Đồng thời, mình cũng đang tìm hiểu thêm các chứng chỉ tin học quốc tế để bổ trợ cho ngành nghề.
-            </p>
-            <img src="https://img.freepik.com/free-photo/graphs-reports-with-magnifying-glass-calculator_123827-23467.jpg" class="illus-img">
+    <div class="section-card">
+        <div class="section-header">
+            <i class="fas fa-star"></i> <h3>THẾ MẠNH & KỸ NĂNG</h3>
         </div>
-
-        <div class="section">
-            <div class="section-title"><i class="fas fa-heart"></i> Sở thích & Lifestyle</div>
-            <p class="content-text">
-                Ngoài thời gian dành cho bài vở, mình thích đọc những cuốn sách về tư duy tài chính, nghe nhạc Lofi để thư giãn và thường xuyên cập nhật các tin tức về kinh tế xã hội. Những thói quen này giúp mình luôn giữ được tinh thần tích cực và nhạy bén.
-            </p>
+        <p class="content-text">
+            Tập trung rèn luyện các kỹ năng nền tảng cho ngành Kế toán - Kiểm toán:
+        </p>
+        <div class="skills-grid">
+            <div class="skill-item"><i class="fas fa-square-root-alt"></i><p>Toán học logic</p></div>
+            <div class="skill-item"><i class="fas fa-file-excel"></i><p>Excel cơ bản</p></div>
+            <div class="skill-item"><i class="fas fa-search-dollar"></i><p>Phân tích số liệu</p></div>
+            <div class="skill-item"><i class="fas fa-book-open"></i><p>Ngữ Văn</p></div>
         </div>
     </div>
 
+    <div class="section-card">
+        <div class="section-header">
+            <i class="fas fa-bullseye"></i> <h3>MỤC TIÊU ĐẠI HỌC 2026</h3>
+        </div>
+        <p class="content-text">
+            Chinh phục tấm vé vào chuyên ngành <b>Kế toán - Kiểm toán</b> với điểm số mục tiêu 7.5+ mỗi môn. Quyết tâm học tập hết mình tại mái trường Tôn Đức Thắng!
+        </p>
+        <img src="https://img.freepik.com/free-photo/graphs-reports-with-magnifying-glass-calculator_123827-23467.jpg" class="illus-img">
+    </div>
+
     <footer>
-        <p><b>LÊ THÙY DUYÊN - KẾ TOÁN VIÊN TƯƠNG LAI</b></p>
-        <p>Lớp 11 - THPT Tôn Đức Thắng, Nam Ninh Hòa, Khánh Hòa</p>
-        <p>© 2026 Crafted with Passion</p>
+        <p>© 2026 Portfolio Design by Le Thuy Duyen</p>
+        <p>Nam Ninh Hoa - Ton Duc Thang School</p>
     </footer>
 </div>
 
