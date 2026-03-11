@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Professional - Lê Thùy Duyên</title>
+    <title>Professional CV - Lê Thùy Duyên</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
@@ -11,7 +11,7 @@
         #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; }
         .container { max-width: 550px; margin: 20px auto; padding: 15px; position: relative; }
 
-        /* Card Header */
+        /* Card Header Neon */
         .profile-card {
             background: rgba(255, 255, 255, 0.03); border-radius: 25px; padding: 30px 20px;
             text-align: center; border: 1px solid #00d4ff; backdrop-filter: blur(15px);
@@ -24,26 +24,36 @@
         /* Khối nội dung */
         .section {
             margin-top: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 20px;
-            padding: 25px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;
+            padding: 20px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;
         }
-        .section:hover { border-color: #00d4ff; transform: translateY(-5px); }
-        h2 { font-size: 18px; color: #00d4ff; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(0,212,255,0.2); padding-bottom: 10px; margin-bottom: 15px; }
+        .section:hover { border-color: #00d4ff; transform: translateY(-5px); background: rgba(0, 212, 255, 0.05); }
+        h2 { font-size: 18px; color: #00d4ff; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(0,212,255,0.2); padding-bottom: 10px; }
         
-        /* Nội dung chi tiết - BỔ SUNG NHIỀU HƠN */
-        .info-text { font-size: 15px; line-height: 1.8; color: #ddd; text-align: justify; }
-        .intro-highlight { 
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
-            padding: 10px; border-left: 3px solid #00d4ff; margin: 15px 0; font-style: italic;
-        }
+        /* Nội dung chi tiết */
+        .info-text { font-size: 14px; line-height: 1.8; color: #ddd; }
         .highlight { color: #00d4ff; font-weight: bold; }
         
-        .illus-img { width: 100%; border-radius: 15px; margin: 15px 0; border: 1px solid #333; box-shadow: 0 0 15px rgba(0, 212, 255, 0.1); }
+        /* Phong cách hình ảnh minh họa mới */
+        .illus-img { width: 100%; border-radius: 15px; margin: 15px 0; border: 1px solid #333; box-shadow: 0 0 20px rgba(0, 212, 255, 0.15); transition: 0.3s; }
+        .illus-img:hover { transform: scale(1.03); box-shadow: 0 0 30px rgba(0, 212, 255, 0.3); }
 
+        /* Grid kỹ năng */
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .grid-item { background: rgba(255,255,255,0.05); padding: 12px; border-radius: 12px; font-size: 13px; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.1); }
         .grid-item i { color: #00d4ff; }
 
-        footer { text-align: center; padding: 40px; font-size: 11px; color: #444; }
+        /* Lộ trình học tập */
+        .timeline { border-left: 2px dashed #00d4ff; padding-left: 20px; margin-left: 10px; }
+        .time-item { position: relative; margin-bottom: 15px; }
+        .time-item::before { content: ""; position: absolute; left: -26px; top: 5px; width: 10px; height: 10px; background: #00d4ff; border-radius: 50%; box-shadow: 0 0 10px #00d4ff; }
+
+        /* Liên hệ & Slogan */
+        .slogan { font-style: italic; text-align: center; color: #888; margin: 20px 0; font-size: 14px; }
+        .contact-bar { display: flex; justify-content: center; gap: 20px; margin-top: 15px; }
+        .contact-bar i { font-size: 24px; color: #00d4ff; transition: 0.3s; cursor: pointer; }
+        .contact-bar i:hover { transform: scale(1.3); text-shadow: 0 0 15px #00d4ff; }
+
+        footer { text-align: center; padding: 40px; font-size: 11px; color: #444; letter-spacing: 1px; }
     </style>
 </head>
 <body>
@@ -54,24 +64,23 @@
     
     <div class="profile-card">
         <img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png" class="avatar">
-        <h1>LÊ THÙY DUYÊN</h1>
+        <h1 class="animate__animated animate__pulse animate__infinite">LÊ THÙY DUYÊN</h1>
         <div class="tagline">Kế Toán Viên Tương Lai | Class 11</div>
+        <div class="contact-bar">
+            <i class="fab fa-facebook"></i>
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-phone-alt"></i>
+        </div>
     </div>
+
+    <p class="slogan">"Sự chính xác là linh hồn của những con số."</p>
 
     <div class="section">
         <h2><i class="fas fa-user-astronaut"></i> GIỚI THIỆU CHI TIẾT</h2>
-        <div class="info-text">
-            <p>Chào bạn, mình là <span class="highlight">Lê Thùy Duyên</span>, hiện đang theo học lớp 11 tại ngôi trường giàu truyền thống <span class="highlight">THPT Tôn Đức Thắng</span>. Mình tự nhận thấy bản thân là một người có sự giao thoa giữa tư duy logic của những con số và sự nhạy bén của một tâm hồn ham học hỏi.</p>
-            
-            <div class="intro-highlight">
-                "Với mình, Kế toán không chỉ là những phép tính khô khan, mà là nghệ thuật sắp xếp dữ liệu để tạo nên sự minh bạch và tin cậy."
-            </div>
-
-            <p>Từ những năm đầu cấp ba, mình đã sớm bộc lộ niềm yêu thích đặc biệt với môn Toán và các môn học về Kinh tế - Pháp luật. Mình có khả năng <span class="highlight">tập trung cao độ</span>, sự <span class="highlight">tỉ mỉ trong từng chi tiết nhỏ</span> và một tinh thần trách nhiệm thép đối với mọi nhiệm vụ được giao. Đây chính là những tố chất quan trọng nhất mà một kế toán viên cần có.</p>
-
-            <p>Ngoài việc học tập trên lớp, mình thường xuyên tìm tòi các kiến thức về công nghệ thông tin, cách sử dụng các hàm Excel cơ bản và tìm hiểu về thị trường tài chính. Mình luôn khao khát được rèn luyện bản thân trong một môi trường chuyên nghiệp để biến ước mơ trở thành một <span class="highlight">Kế toán viên/Kiểm toán viên</span> tài năng vào năm 2026 trở thành hiện thực.</p>
-        </div>
-        <img src="https://img.freepik.com/free-vector/accountant-concept-illustration_114360-1222.jpg" class="illus-img">
+        <p class="info-text">
+            Chào bạn! Mình là cô gái lớp 11 trường <span class="highlight">THPT Tôn Đức Thắng</span>. Với tính cách điềm tĩnh và yêu thích sự tỉ mỉ của những con số, mình đã định hướng bản thân theo đuổi ngành <span class="highlight">Kế toán - Kiểm toán</span>. Mình tin rằng mỗi con số đều có câu chuyện riêng và nhiệm vụ của mình là làm cho chúng trở nên minh bạch.
+        </p>
+        <img src="https://img.freepik.com/premium-photo/attractive-young-female-accountant-using-calculator-calculate-business-results-financial-document_33807-684.jpg" class="illus-img" alt="Minh họa Kế toán">
     </div>
 
     <div class="section">
@@ -82,17 +91,21 @@
             <div class="grid-item"><i class="fas fa-search-dollar"></i> Phân tích số liệu</div>
             <div class="grid-item"><i class="fas fa-balance-scale"></i> Luật kinh tế</div>
         </div>
+        <img src="https://img.freepik.com/premium-photo/directly-above-view-calculator-money-financial-reports_1048944-1191599.jpg" class="illus-img" alt="Báo cáo tài chính và dụng cụ">
     </div>
 
     <div class="section">
-        <h2><i class="fas fa-map-signs"></i> MỤC TIÊU 2026</h2>
-        <p class="info-text">🎯 Đậu Nguyện vọng 1 chuyên ngành <span class="highlight">Kế toán - Kiểm toán</span> với điểm số mục tiêu 7.5+ mỗi môn. Quyết tâm học tập hết mình!</p>
-        <img src="https://img.freepik.com/free-vector/paper-financial-report-magnifying-glass-calculator-pen_1284-30792.jpg" class="illus-img">
+        <h2><i class="fas fa-bullseye"></i> MỤC TIÊU ĐẠI HỌC 2026</h2>
+        <div class="grid-item goal-item">
+            <i class="fas fa-graduation-cap" style="font-size: 20px;"></i>
+            <span class="info-text">🎯 Chinh phục tấm vé vào chuyên ngành <span class="highlight">Kế toán - Kiểm toán</span> với điểm số mục tiêu 7.5+ mỗi môn. Quyết tâm học tập hết mình!</span>
+        </div>
+        <img src="https://img.freepik.com/free-photo/graphs-reports-with-magnifying-glass-calculator_123827-23467.jpg" class="illus-img" alt="Phân tích tăng trưởng và mục tiêu">
     </div>
 
     <footer>
         <p>DESIGN BY LE THUY DUYEN - 2026</p>
-        <p>NAM NINH HOA - KHANH HOA</p>
+        <p>NAM NINH HOA - KHANH HOA - VIET NAM</p>
     </footer>
 </div>
 
