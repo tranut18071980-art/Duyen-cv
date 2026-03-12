@@ -1,13 +1,17 @@
 ```html
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CV - Lê Thùy Duyên</title>
+<title>CV Portfolio - Lê Thùy Duyên</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
 <style>
 
@@ -20,128 +24,353 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#ffe6f2,#e6f3ff);
+background:#f5f7fb;
 color:#333;
 }
 
 /* NAVBAR */
 
 nav{
-background:white;
+position:fixed;
+width:100%;
+background:#ffffffcc;
+backdrop-filter:blur(10px);
 padding:15px;
-text-align:center;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-position:sticky;
-top:0;
+z-index:100;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+gap:40px;
+list-style:none;
 }
 
 nav a{
-margin:0 15px;
 text-decoration:none;
 font-weight:600;
-color:#ff4f9a;
+color:#333;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#4facfe;
 }
 
 /* HERO */
 
 .hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:60px 20px;
+color:white;
+background:linear-gradient(120deg,#4facfe,#00f2fe);
+position:relative;
 }
 
 .avatar{
 width:180px;
 border-radius:50%;
 border:6px solid white;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
 transition:0.4s;
 }
 
 .avatar:hover{
-transform:scale(1.05);
+transform:scale(1.1);
 }
 
 .hero h1{
+font-size:42px;
 margin-top:20px;
-font-size:36px;
-color:#ff4f9a;
 }
 
 .hero p{
 margin-top:10px;
-font-size:18px;
 }
 
 /* SECTION */
 
 section{
-max-width:900px;
+max-width:1000px;
 margin:auto;
-padding:40px 20px;
+padding:70px 20px;
 }
+
+/* CARD */
 
 .card{
 background:white;
-padding:25px;
-margin-bottom:25px;
+padding:30px;
+margin:20px 0;
 border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
 }
 
-/* TITLES */
-
 h2{
-color:#ff4f9a;
 margin-bottom:15px;
+}
+
+/* ACCOUNTING IMAGE */
+
+.accounting-img{
+width:110px;
+display:block;
+margin:15px auto;
 }
 
 /* SKILLS */
 
 .skill{
-margin-bottom:15px;
+margin:15px 0;
 }
 
 .bar{
-height:10px;
-background:#eee;
-border-radius:10px;
+height:12px;
+background:#ddd;
+border-radius:20px;
 overflow:hidden;
 }
 
 .bar span{
 display:block;
 height:100%;
-background:#ff4f9a;
+background:linear-gradient(90deg,#4facfe,#00f2fe);
+animation:load 2s;
+}
+
+@keyframes load{
+from{width:0}
+}
+
+/* TIMELINE */
+
+.timeline{
+border-left:4px solid #4facfe;
+padding-left:20px;
+}
+
+.timeline-item{
+margin:20px 0;
+}
+
+/* SOCIAL */
+
+.social{
+text-align:center;
+margin-top:20px;
+}
+
+.social a{
+margin:10px;
+font-size:22px;
+text-decoration:none;
+color:#333;
 }
 
 /* FOOTER */
 
 footer{
+background:#4facfe;
+color:white;
 text-align:center;
-padding:30px;
-color:#666;
+padding:20px;
+margin-top:40px;
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
-<a href="#about">Giới thiệu</a>
-<a href="#education">Học tập</a>
-<a href="#skills">Kỹ năng</a>
-<a href="#career">Định hướng nghề</a>
+<ul>
+<li><a href="#about">Giới thiệu</a></li>
+<li><a href="#education">Học vấn</a></li>
+<li><a href="#skills">Kỹ năng</a></li>
+<li><a href="#goal">Mục tiêu</a></li>
+</ul>
 </nav>
+
+<!-- HERO -->
 
 <div class="hero">
 
-<img src="avatar-anime.png" class="avatar">
+<img src="https://i.imgur.com/1X6KXQp.png" class="avatar">
 
-<h1>L
+<h1>LÊ THÙY DUYÊN</h1>
+
+<p>Học sinh lớp 11</p>
+
+<p>THPT Tôn Đức Thắng – Nam Ninh Hòa</p>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="card" data-aos="fade-up">
+
+<h2>👩‍🎓 Giới thiệu</h2>
+
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" class="accounting-img">
+
+<p>
+
+Tôi là học sinh lớp 11 tại trường THPT Tôn Đức Thắng.
+Tôi yêu thích các con số và lĩnh vực tài chính.
+Mục tiêu của tôi là theo đuổi ngành Kế toán và phát triển sự nghiệp trong lĩnh vực tài chính doanh nghiệp.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="card" data-aos="fade-right">
+
+<h2>📚 Học vấn</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>2023 - Hiện tại</h3>
+
+<p>Học sinh lớp 11</p>
+
+<p>Trường THPT Tôn Đức Thắng – Nam Ninh Hòa</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="card" data-aos="fade-left">
+
+<h2>📊 Kỹ năng</h2>
+
+<div class="skill">
+
+Toán học
+
+<div class="bar">
+<span style="width:90%"></span>
+</div>
+
+</div>
+
+<div class="skill">
+
+Tin học văn phòng
+
+<div class="bar">
+<span style="width:80%"></span>
+</div>
+
+</div>
+
+<div class="skill">
+
+Làm việc nhóm
+
+<div class="bar">
+<span style="width:75%"></span>
+</div>
+
+</div>
+
+<div class="skill">
+
+Quản lý tài chính
+
+<div class="bar">
+<span style="width:70%"></span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GOAL -->
+
+<section id="goal">
+
+<div class="card" data-aos="zoom-in">
+
+<h2>🎯 Mục tiêu nghề nghiệp</h2>
+
+<img src="https://cdn-icons-png.flaticon.com/512/2331/2331943.png" class="accounting-img">
+
+<p>
+
+Ngắn hạn: Học tốt chương trình THPT và chuẩn bị kiến thức cho ngành Kế toán.
+
+</p>
+
+<p>
+
+Dài hạn: Trở thành kế toán viên chuyên nghiệp và làm việc trong môi trường doanh nghiệp.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SOCIAL -->
+
+<div class="social">
+
+<a href="#">📘</a>
+<a href="#">📸</a>
+<a href="#">📧</a>
+
+</div>
+
+<footer>
+
+<p>© 2026 Portfolio CV | Lê Thùy Duyên</p>
+
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+duration:1000
+});
+
+</script>
+
+</body>
+
+</html>
 ```
