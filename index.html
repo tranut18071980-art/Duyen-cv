@@ -1,75 +1,109 @@
-```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - LÊ THÙY DUYÊN</title>
+<title>CV - Lê Thùy Duyên</title>
 
 <style>
 
 body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f4f6fb;
+font-family: Arial;
+margin:0;
+background: linear-gradient(120deg,#4facfe,#00f2fe);
 }
-
-/* Header */
-
-.header{
-    background:#2c6ee7;
-    color:white;
-    text-align:center;
-    padding:40px;
-}
-
-.header h1{
-    margin:0;
-    font-size:36px;
-}
-
-.header p{
-    margin-top:8px;
-}
-
-/* Container */
 
 .container{
-    max-width:900px;
-    margin:auto;
-    padding:30px;
+width:90%;
+max-width:1000px;
+margin:auto;
+padding:20px;
 }
 
-/* Section */
-
-.section{
-    background:white;
-    padding:25px;
-    margin-bottom:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+header{
+text-align:center;
+color:white;
+padding:40px;
+animation:fadeIn 1.5s;
 }
 
-.section h2{
-    color:#2c6ee7;
-    margin-bottom:15px;
+.avatar{
+width:150px;
+border-radius:50%;
+border:5px solid white;
+transition:0.4s;
 }
 
-/* Skills */
+.avatar:hover{
+transform:scale(1.1);
+}
+
+.card{
+background:white;
+margin:20px 0;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+animation:fadeUp 1s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+h2{
+color:#333;
+}
+
+.accounting-img{
+width:120px;
+display:block;
+margin:10px auto;
+transition:0.4s;
+}
+
+.accounting-img:hover{
+transform:scale(1.2) rotate(5deg);
+}
 
 .skill{
-    background:#2c6ee7;
-    color:white;
-    display:inline-block;
-    padding:6px 12px;
-    border-radius:20px;
-    margin:5px;
+margin:10px 0;
 }
 
-.footer{
-    text-align:center;
-    padding:20px;
-    color:#777;
+.bar{
+height:10px;
+background:#ddd;
+border-radius:10px;
+overflow:hidden;
+}
+
+.bar span{
+display:block;
+height:100%;
+background:#4facfe;
+}
+
+footer{
+text-align:center;
+color:white;
+padding:20px;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeIn{
+from{opacity:0}
+to{opacity:1}
 }
 
 </style>
@@ -77,72 +111,114 @@ body{
 
 <body>
 
-<div class="header">
-<h1>LÊ THÙY DUYÊN</h1>
-<p>Học sinh lớp 11</p>
-<p>Trường THPT Tôn Đức Thắng - Nam Ninh Hòa</p>
-<p>Định hướng nghề nghiệp: Kế toán</p>
-</div>
-
 <div class="container">
 
-<div class="section">
-<h2>Giới thiệu</h2>
-<p>
-Tôi là học sinh lớp 11 tại trường THPT Tôn Đức Thắng - Nam Ninh Hòa.
-Tôi có định hướng theo đuổi ngành Kế toán trong tương lai. 
-Tôi là người cẩn thận, tỉ mỉ và thích làm việc với các con số. 
-Mục tiêu của tôi là học tập tốt để sau này trở thành một kế toán chuyên nghiệp.
-</p>
-</div>
+<header>
 
-<div class="section">
-<h2>Học vấn</h2>
-<p><b>2023 - nay</b></p>
+<img src="https://i.imgur.com/1X6KXQp.png" class="avatar">
+
+<h1>LÊ THÙY DUYÊN</h1>
+
 <p>Học sinh lớp 11</p>
-<p>Trường THPT Tôn Đức Thắng - Nam Ninh Hòa</p>
-</div>
 
-<div class="section">
-<h2>Kỹ năng</h2>
+<p>Trường THPT Tôn Đức Thắng – Nam Ninh Hòa</p>
 
-<span class="skill">Tin học văn phòng</span>
-<span class="skill">Excel cơ bản</span>
-<span class="skill">Tư duy logic</span>
-<span class="skill">Cẩn thận và tỉ mỉ</span>
-<span class="skill">Làm việc nhóm</span>
+</header>
 
-</div>
+<div class="card">
 
-<div class="section">
-<h2>Mục tiêu nghề nghiệp</h2>
+<h2>👩‍🎓 Giới thiệu</h2>
+
 <p>
-Trong tương lai tôi mong muốn học ngành Kế toán tại trường đại học phù hợp. 
-Tôi muốn phát triển các kỹ năng liên quan đến tài chính, quản lý số liệu và sử dụng thành thạo các phần mềm kế toán để trở thành một kế toán giỏi.
+Tôi là học sinh lớp 11 tại trường THPT Tôn Đức Thắng.
+Tôi có niềm yêu thích với các con số, tài chính và quản lý tiền bạc.
+Trong tương lai tôi mong muốn trở thành một kế toán chuyên nghiệp,
+đóng góp vào sự phát triển của doanh nghiệp.
 </p>
-</div>
-
-<div class="section">
-<h2>Hoạt động</h2>
-<ul>
-<li>Tham gia các hoạt động của lớp và nhà trường</li>
-<li>Hỗ trợ các hoạt động đoàn thanh niên</li>
-<li>Rèn luyện kỹ năng làm việc nhóm và trách nhiệm</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Liên hệ</h2>
-<p>Email: example@gmail.com</p>
-<p>Facebook: facebook.com/...</p>
-</div>
 
 </div>
 
-<div class="footer">
-© 2026 - CV cá nhân của LÊ THÙY DUYÊN
+<div class="card">
+
+<h2>💰 Định hướng nghề nghiệp</h2>
+
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" class="accounting-img">
+
+<p>
+Mục tiêu của tôi là học tập tốt các môn liên quan đến toán học,
+tài chính và kinh tế để theo đuổi ngành Kế toán trong tương lai.
+Tôi mong muốn làm việc trong môi trường doanh nghiệp và phát triển
+kỹ năng quản lý tài chính.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>📚 Học vấn</h2>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" class="accounting-img">
+
+<p>
+Trường THPT Tôn Đức Thắng – Nam Ninh Hòa
+</p>
+
+<p>
+Học sinh lớp 11
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>📊 Kỹ năng</h2>
+
+<div class="skill">
+Toán học
+<div class="bar"><span style="width:90%"></span></div>
+</div>
+
+<div class="skill">
+Tin học văn phòng
+<div class="bar"><span style="width:80%"></span></div>
+</div>
+
+<div class="skill">
+Làm việc nhóm
+<div class="bar"><span style="width:75%"></span></div>
+</div>
+
+<div class="skill">
+Quản lý tài chính cơ bản
+<div class="bar"><span style="width:70%"></span></div>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🎯 Mục tiêu</h2>
+
+<img src="https://cdn-icons-png.flaticon.com/512/2331/2331943.png" class="accounting-img">
+
+<p>
+Ngắn hạn: Học tốt chương trình THPT và chuẩn bị kiến thức cho ngành Kế toán.
+</p>
+
+<p>
+Dài hạn: Trở thành một kế toán viên chuyên nghiệp,
+làm việc trong môi trường doanh nghiệp và phát triển sự nghiệp ổn định.
+</p>
+
+</div>
+
+<footer>
+
+<p>© 2026 - CV Cá Nhân | Lê Thùy Duyên</p>
+
+</footer>
+
 </div>
 
 </body>
 </html>
-```
