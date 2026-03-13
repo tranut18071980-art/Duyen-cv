@@ -1,277 +1,179 @@
-```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CV Anime - Lê Thùy Duyên</title>
+<title>CV - Lê Thùy Duyên</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
 body{
-background:linear-gradient(135deg,#ffd6e8,#d6f0ff);
+font-family:'Poppins',sans-serif;
+margin:0;
+background:#fff;
 color:#333;
 }
 
-/* NAVBAR */
+/* HEADER */
 
-nav{
-background:#ffffffcc;
-backdrop-filter:blur(10px);
-padding:15px;
-position:sticky;
-top:0;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-nav ul{
-display:flex;
-justify-content:center;
-gap:30px;
-list-style:none;
-}
-
-nav a{
-text-decoration:none;
-color:#ff6fa5;
-font-weight:600;
-}
-
-/* HERO */
-
-.hero{
+header{
+background:linear-gradient(135deg,#ff7eb9,#ffc0d9);
+color:white;
 text-align:center;
-padding:70px 20px;
-}
-
-.avatar-box{
-display:inline-block;
-padding:6px;
-border-radius:50%;
-background:linear-gradient(45deg,#ff8ec7,#7ad7ff);
+padding:60px 20px;
 }
 
 .avatar{
-width:180px;
+width:160px;
+height:160px;
 border-radius:50%;
-display:block;
-}
-
-.hero h1{
-margin-top:15px;
-font-size:36px;
-color:#ff5a9a;
+border:5px solid white;
+object-fit:cover;
+margin-bottom:15px;
 }
 
 /* SECTION */
 
 section{
-max-width:900px;
-margin:auto;
-padding:40px 20px;
+padding:50px 10%;
 }
 
-/* CARD */
-
-.card{
-background:white;
-padding:30px;
-margin:20px 0;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-transition:0.3s;
+h2{
+color:#ff5fa2;
+margin-bottom:20px;
 }
 
-.card:hover{
-transform:translateY(-8px);
+/* SKILL */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 }
 
-/* ICON IMAGE */
-
-.icon-img{
-width:90px;
-display:block;
-margin:10px auto;
-}
-
-/* SKILLS */
-
-.skill{
-margin:15px 0;
-}
-
-.bar{
-height:10px;
-background:#eee;
-border-radius:20px;
-overflow:hidden;
-}
-
-.bar span{
-display:block;
-height:100%;
-background:linear-gradient(90deg,#ff8ec7,#7ad7ff);
+.skill-box{
+background:#ffe6f1;
+padding:20px;
+border-radius:12px;
+text-align:center;
 }
 
 /* TIMELINE */
 
 .timeline{
-border-left:4px solid #ff8ec7;
+border-left:3px solid #ff7eb9;
 padding-left:20px;
 }
 
-.timeline-item{
-margin:20px 0;
+.item{
+margin-bottom:20px;
 }
 
-/* FOOTER */
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
 
 footer{
+background:#ff7eb9;
+color:white;
 text-align:center;
 padding:20px;
-color:#ff5a9a;
-font-weight:500;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<nav>
-<ul>
-<li><a href="#about">Giới thiệu</a></li>
-<li><a href="#education">Học vấn</a></li>
-<li><a href="#skills">Kỹ năng</a></li>
-<li><a href="#goal">Mục tiêu</a></li>
-</ul>
-</nav>
+<header>
 
-<div class="hero">
-
-<div class="avatar-box">
-
-<img src="https://i.pinimg.com/736x/7e/6a/2c/7e6a2c5e2f1b1c3e0c3f1e7c1e4f0c2d.jpg" class="avatar">
-
-</div>
+<img src="avatar.jpg" class="avatar">
 
 <h1>LÊ THÙY DUYÊN</h1>
 
-<p>🌸 Học sinh lớp 11</p>
+<p>Học sinh lớp 11 – THPT Tôn Đức Thắng</p>
 
-<p>🏫 THPT Tôn Đức Thắng – Nam Ninh Hòa</p>
+<p>Định hướng nghề nghiệp: Kế toán</p>
 
-</div>
+</header>
 
-<section id="about">
 
-<div class="card">
+<section>
 
-<h2>💖 Giới thiệu</h2>
-
-<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" class="icon-img">
+<h2>Giới thiệu</h2>
 
 <p>
-
-Tôi là học sinh lớp 11 tại trường THPT Tôn Đức Thắng.  
-Tôi yêu thích các con số và lĩnh vực tài chính.  
-Mục tiêu của tôi là theo đuổi ngành Kế toán và phát triển trong lĩnh vực tài chính doanh nghiệp.
-
+Xin chào! Tôi là Lê Thùy Duyên, hiện đang là học sinh lớp 11 tại
+trường THPT Tôn Đức Thắng – Ninh Hòa.
+Tôi có niềm yêu thích với các con số và mong muốn
+theo đuổi ngành Kế toán trong tương lai.
 </p>
+
+</section>
+
+
+<section>
+
+<h2>Kỹ năng</h2>
+
+<div class="skills">
+
+<div class="skill-box">Tin học văn phòng</div>
+
+<div class="skill-box">Excel cơ bản</div>
+
+<div class="skill-box">Tư duy logic</div>
+
+<div class="skill-box">Làm việc nhóm</div>
 
 </div>
 
 </section>
 
-<section id="education">
 
-<div class="card">
+<section>
 
-<h2>📚 Học vấn</h2>
+<h2>Học vấn</h2>
 
 <div class="timeline">
 
-<div class="timeline-item">
-
-<h3>2023 - Hiện tại</h3>
-
-<p>Học sinh lớp 11</p>
-
-<p>Trường THPT Tôn Đức Thắng – Nam Ninh Hòa</p>
-
+<div class="item">
+<strong>2023 – Nay</strong>
+<p>Học sinh lớp 11 – THPT Tôn Đức Thắng</p>
 </div>
 
-</div>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<div class="card">
-
-<h2>📊 Kỹ năng</h2>
-
-<div class="skill">
-Toán học
-<div class="bar"><span style="width:90%"></span></div>
-</div>
-
-<div class="skill">
-Tin học văn phòng
-<div class="bar"><span style="width:80%"></span></div>
-</div>
-
-<div class="skill">
-Làm việc nhóm
-<div class="bar"><span style="width:75%"></span></div>
-</div>
-
-<div class="skill">
-Quản lý tài chính
-<div class="bar"><span style="width:70%"></span></div>
+<div class="item">
+<strong>Định hướng</strong>
+<p>Ngành Kế toán – Tài chính</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="goal">
 
-<div class="card">
+<section class="contact">
 
-<h2>🎯 Mục tiêu nghề nghiệp</h2>
+<h2>Liên hệ</h2>
 
-<img src="https://cdn-icons-png.flaticon.com/512/2331/2331943.png" class="icon-img">
+<p>Email: example@gmail.com</p>
 
-<p>Ngắn hạn: Học tốt chương trình THPT và chuẩn bị kiến thức cho ngành Kế toán.</p>
+<p>Facebook: facebook.com/duyen</p>
 
-<p>Dài hạn: Trở thành kế toán viên chuyên nghiệp.</p>
-
-</div>
+<p>Điện thoại: 09xxxxxxxx</p>
 
 </section>
+
 
 <footer>
 
-🌸 CV Anime Portfolio | Lê Thùy Duyên 🌸
+<p>© 2026 - CV Lê Thùy Duyên</p>
 
 </footer>
 
 </body>
-
 </html>
-```
